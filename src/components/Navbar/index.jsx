@@ -9,7 +9,7 @@ import { ImWhatsapp } from 'react-icons/im';
 
 const ContainerNav = styled.nav`
   position: sticky;
-  bottom: 0;
+  bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,6 +20,7 @@ const ContainerNav = styled.nav`
   background: #fff;
   border-radius: 30px;
   margin: 0 auto;
+  box-shadow: 0px -1px 2px 2px rgba(245, 245, 245, 1);
   
   a {
     font-size: 30px;

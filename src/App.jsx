@@ -7,7 +7,8 @@ import Navbar from './components/Navbar';
 
 const theme = {
   colors: {
-    base: '#f2f2f5', 
+    // base: '#fbfbfb', 
+    base: '#fffdfc', 
     pink:'#EE5E69',
     pinkGradient: 'linear-gradient(90deg, rgba(238,166,171,1) 0%, rgba(238,94,105,1) 100%)',
     gray: '#B9BBC3'
@@ -26,11 +27,13 @@ const Container = styled.div`
   grid-template-rows: 80px 1fr 60px;
   overflow-y: auto;
   height: 100vh;
+  /* width: 100%; */
   margin: 0 auto;
   padding: 10px;
   max-width: 1300px;
-  border: 3px solid #000;
+  /* border: 3px solid #000; */
   background: ${theme.colors.base};
+  /* background: green; */
 `
 
 export default function App() {

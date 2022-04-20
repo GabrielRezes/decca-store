@@ -19,8 +19,8 @@ const Image = styled.img.attrs(props => {src: props.src})`
 `;
 
 const Info = styled.span`
-  background: green;
-  color: red;
+  /* background: green; */
+  color: #000;
 `;
 export default function Card ({image, info}) {
 

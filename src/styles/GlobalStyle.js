@@ -9,11 +9,26 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
 	  list-style: none;
-    color: inherit
+    color: inherit;
   }
 
   body {
-    background: #ECECF1;
+
+    background: #fffdfc;
+
+    &::-webkit-scrollbar {
+      width: 8px;               /* width of the entire scrollbar */
+    }
+
+    &::-webkit-scrollbar-track {
+      background: orange;        /* color of the tracking area */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: blue;    /* color of the scroll thumb */
+      border-radius: 20px;       /* roundness of the scroll thumb */
+      border: 3px solid orange;  /* creates padding around scroll thumb */
+    }
   }
 
   button, ul, li {

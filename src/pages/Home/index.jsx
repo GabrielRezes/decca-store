@@ -8,11 +8,14 @@ const ContainerHome = styled.main`
   place-items: center;
   grid-template-columns: 1fr;
   gap: 10px;
+  /* background: yellow; */
   overflow-x: hidden;
-  max-width: 700px;
+  /* width: 300px; */
 
+  
   @media (min-width: ${props => props.theme.size.sm}) {
     grid-template-columns: 1fr 1fr;
+    width: 900px;
   }
 `;
 
