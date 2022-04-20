@@ -31,7 +31,7 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  button, ul, li {
+  button, ul, li, img {
     cursor: pointer
   }
 `;

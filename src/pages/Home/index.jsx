@@ -4,18 +4,20 @@ import Card from'../../components/Card';
 
 const ContainerHome = styled.main`
   display: grid;
-  margin: 0 auto;
   place-items: center;
   grid-template-columns: 1fr;
   gap: 10px;
-  /* background: yellow; */
   overflow-x: hidden;
-  /* width: 300px; */
+  width: 100%;
 
-  
-  @media (min-width: ${props => props.theme.size.sm}) {
+  @media (min-width: ${props => props.theme.size.md}) {
     grid-template-columns: 1fr 1fr;
-    width: 900px;
+    padding: 10px 60px;
+  }
+
+  @media (min-width: ${props => props.theme.size.xl}) {
+    grid-template-columns: 1fr 1fr 1fr;
+    /* padding: 10px 300px; */
   }
 `;
 

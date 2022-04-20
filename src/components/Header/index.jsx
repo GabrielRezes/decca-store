@@ -10,6 +10,11 @@ const ContainerHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   height: 60px;
+
+  @media (min-width: ${props => props.theme.size.md}) {
+    width: 690px;
+    margin: 0 auto;
+  }   
 `;
 
 const ContainerIcon = styled.div`
