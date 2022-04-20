@@ -2,14 +2,16 @@ import { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 
 import styled from 'styled-components';
-import { AiOutlineUser } from 'react-icons/ai';
+import { AiOutlineUser, AiOutlineInfoCircle } from 'react-icons/ai';
 import { BiHomeAlt } from 'react-icons/bi';
 import { ImWhatsapp } from 'react-icons/im';
+import { RiShoppingCartLine } from 'react-icons/ri';
 
 
 const ContainerNav = styled.nav`
   position: sticky;
-  bottom: 20px;
+  top: 100%;
+  z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -63,9 +65,17 @@ export default function Navbar () {
           <BiHomeAlt/>
         </Link>
 
+        <Link to='/'>
+          <AiOutlineInfoCircle/>
+        </Link>
+
         <ContainerButton>
           <button><ImWhatsapp/></button>
         </ContainerButton>
+
+        <Link to='/'>
+          <RiShoppingCartLine/>
+        </Link>
 
         <Link to='/login'>
           <AiOutlineUser/>

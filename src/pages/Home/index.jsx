@@ -1,38 +1,44 @@
 import styled from 'styled-components';
-import ring from '../../assets/images/ring.png';
+import a from '../../assets/images/1.jpeg';
+import b from '../../assets/images/2.jpeg';
+import c from '../../assets/images/3.jpeg';
+import d from '../../assets/images/4.jpeg';
+import e from '../../assets/images/5.jpeg';
 import Card from'../../components/Card';
 
 const ContainerHome = styled.main`
-  display: grid;
-  place-items: center;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  overflow-x: hidden;
-  width: 100%;
 
-  @media (min-width: ${props => props.theme.size.md}) {
-    grid-template-columns: 1fr 1fr;
-    padding: 10px 60px;
-  }
 
-  @media (min-width: ${props => props.theme.size.xl}) {
-    grid-template-columns: 1fr 1fr 1fr;
-    /* padding: 10px 300px; */
-  }
 `;
 
 export default function Home () {
 
-  let image = {img: ring}
-  let arr = new Array(image,image,image,image,image,image,image,image,image,image,image,image, image,image,image,image,image,)
+  let arr = [
+    {img: a},
+    {img: a},
+    {img: a},
+    {img: b},
+    {img: b},
+    {img: b},
+    {img: c},
+    {img: c},
+    {img: c},
+    {img: d},
+    {img: d},
+    {img: d},
+    {img: e},
+    {img: e},
+    {img: e},
+
+  ]
 
   return (
     <ContainerHome>
-      {arr.map(i => {
+      {/* {arr.map(i => {
         return (
           <Card image={i.img} info='R$ 129,00 - n°222'/>
         )
-      })}
+      })} */}
     </ContainerHome>
   );
 };

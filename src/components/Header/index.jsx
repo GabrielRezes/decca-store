@@ -9,7 +9,7 @@ const ContainerHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  /* height: 60px; */
 
   @media (min-width: ${props => props.theme.size.md}) {
     width: 690px;

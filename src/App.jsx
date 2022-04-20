@@ -24,7 +24,7 @@ const theme = {
 
 const Container = styled.div`
   display: grid;
-  grid-template-rows: 80px 1fr 60px;
+  grid-template-rows: 70px 1fr;
   overflow-y: auto;
   height: 100vh;
   margin: 0 auto;
