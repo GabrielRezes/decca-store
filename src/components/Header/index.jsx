@@ -6,10 +6,11 @@ import { BsFillGridFill } from 'react-icons/bs';
 const ContainerHeader = styled.header`
   position: sticky;
   top: 0;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* height: 60px; */
+  background:${props => props.theme.colors.base};
 
   @media (min-width: ${props => props.theme.size.md}) {
     width: 690px;

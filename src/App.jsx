@@ -28,7 +28,7 @@ const Container = styled.div`
   overflow-y: auto;
   height: 100vh;
   margin: 0 auto;
-  padding: 10px;
+  padding: 0 10px;
   background: ${theme.colors.base};
 `
 
