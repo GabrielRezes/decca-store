@@ -7,9 +7,11 @@ import e from '../../assets/images/5.jpeg';
 import Card from'../../components/Card';
 
 const ContainerHome = styled.main`
-
-
+  display: grid;
+  grid-template-rows: 40px 1fr;  
 `;
+
+// conts
 
 export default function Home () {
 
