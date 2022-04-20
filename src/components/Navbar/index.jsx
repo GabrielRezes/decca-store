@@ -8,6 +8,8 @@ import { ImWhatsapp } from 'react-icons/im';
 
 
 const ContainerNav = styled.nav`
+  position: sticky;
+  bottom: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
