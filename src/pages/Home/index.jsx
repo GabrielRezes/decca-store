@@ -14,6 +14,10 @@ const ContainerHome = styled.main`
   grid-template-rows: 40px 1fr;  
   padding: 10px 10px;
   /* background: red; */
+
+  &>:last-child {
+    margin-bottom: 70px;
+  }
 `;
 
 const ContainerSearch = styled.div`
