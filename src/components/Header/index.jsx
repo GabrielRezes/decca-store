@@ -11,6 +11,8 @@ const ContainerHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   background:${props => props.theme.colors.base};
+  box-shadow: 0px 1px 5px 5px rgba(100, 100, 100, 0.1);
+
 
   @media (min-width: ${props => props.theme.size.md}) {
     width: 690px;
