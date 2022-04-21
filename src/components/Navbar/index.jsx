@@ -10,7 +10,7 @@ import { RiShoppingCartLine } from 'react-icons/ri';
 
 const ContainerNav = styled.nav`
   position: sticky;
-  top: 100%;
+  top: 0;
   bottom: 0;
   z-index: 2;
   display: flex;
