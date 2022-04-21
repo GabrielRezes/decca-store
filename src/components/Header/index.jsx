@@ -7,14 +7,17 @@ const ContainerHeader = styled.header`
   position: sticky;
   top: 0;
   height: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 15px;
+  border-radius: 30px;
   background:${props => props.theme.colors.base};
-  box-shadow: 0px 1px 5px 5px rgba(100, 100, 100, 0.1);
+  box-shadow: 0px 1px 5px 2px rgba(100, 100, 100, 0.1);
 
 
-  @media (min-width: ${props => props.theme.size.md}) {
+  @media (min-width: ${({theme}) => theme.size.md}) {
     width: 690px;
     margin: 0 auto;
   }   
@@ -29,7 +32,7 @@ const ContainerIcon = styled.div`
   font-size: 30px;
   background: #fff;
   border-radius: 50%;
-  color: ${props => props.theme.colors.pink};
+  color: ${({theme}) => theme.colors.pink};
 `;
 
 export default function Header () {
