@@ -23,12 +23,13 @@ const theme = {
 };
 
 const Container = styled.div`
+position:relative;
   display: grid;
   grid-template-rows: 70px 1fr;
   overflow-y: auto;
   height: 100vh;
   margin: 0 auto;
-  padding: 0 10px;
+  /* padding: 0 10px; */
   background: ${theme.colors.base};
 `
 
