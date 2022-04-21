@@ -25,10 +25,12 @@ const theme = {
 const Container = styled.div`
   position:relative;
   display: grid;
+  place-items: center;
   grid-template-rows: 60px 1fr;
   overflow-y: auto;
   height: 100vh;
-  margin: 0 auto;
+  width: 100%;
+    /* margin: 0 auto; */
   /* padding: 0 10px; */
   background: ${theme.colors.base};
 `
