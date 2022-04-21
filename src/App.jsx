@@ -23,9 +23,9 @@ const theme = {
 };
 
 const Container = styled.div`
-position:relative;
+  position:relative;
   display: grid;
-  grid-template-rows: 70px 1fr;
+  grid-template-rows: 60px 1fr;
   overflow-y: auto;
   height: 100vh;
   margin: 0 auto;
