@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
 	  list-style: none;
     color: inherit;
+    border: none;
   }
 
   body {
