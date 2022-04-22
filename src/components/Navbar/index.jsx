@@ -21,8 +21,8 @@ const ContainerNav = styled.nav`
   height: 60px;
   border-radius: 30px;
   background: #fff;
-  box-shadow: 0px -1px 2px 2px rgba(245, 245, 245, 1);
-  
+  box-shadow: 0px -1px 2px  rgba(100, 100, 100, 0.1);
+
   a {
     font-size: 30px;
     color: ${props => props.theme.colors.gray};

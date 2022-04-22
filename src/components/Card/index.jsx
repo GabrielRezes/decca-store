@@ -11,7 +11,7 @@ const Image = styled.img.attrs(props => {src: props.src})`
   height: 290px;
   width: 100%;
   border-radius: 70px;
-  box-shadow: 5px 5px 15px rgba(100, 100, 100, 0.9);
+  box-shadow: 3px 3px 5px rgba(100, 100, 100, 0.3);
 `;
 
 const Info = styled.div`
