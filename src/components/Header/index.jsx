@@ -6,20 +6,19 @@ import { BsFillGridFill } from 'react-icons/bs';
 const ContainerHeader = styled.header`
   position: sticky;
   top: 0;
-  height: 100%;
-  width: 100%;
+  grid-area: 'header';
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
+  width: 100%;
+  max-width: 700px;
   padding: 0 15px;
-  border-radius: 30px;
   background:${props => props.theme.colors.base};
   box-shadow: 0px 1px 5px 2px rgba(100, 100, 100, 0.1);
-
-
+  
   @media (min-width: ${({theme}) => theme.size.md}) {
-    width: 690px;
-    margin: 0 auto;
+    border-radius: 30px;
   }   
 `;
 
@@ -38,6 +37,7 @@ const ContainerIcon = styled.div`
 export default function Header () {
   return (
     <ContainerHeader>
+
       <ContainerIcon>
         <BsFillGridFill/>
       </ContainerIcon>
@@ -45,6 +45,7 @@ export default function Header () {
       <ContainerIcon>
         <VscAccount/>
       </ContainerIcon>
+
     </ContainerHeader>  
   );
 };

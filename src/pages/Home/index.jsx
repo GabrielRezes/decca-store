@@ -10,10 +10,12 @@ import { BiSearchAlt } from 'react-icons/bi';
 
 const ContainerHome = styled.main`
   display: grid;
-  place-items: center;
+  grid-area: 'page';
   grid-template-rows: 40px 1fr;  
-  padding: 10px 10px;
-  /* background: red; */
+  place-items: center;
+  gap: 15px;
+  padding: 15px 10px;
+  width: 100%;
 
   &>:last-child {
     margin-bottom: 70px;
@@ -23,14 +25,14 @@ const ContainerHome = styled.main`
 const ContainerSearch = styled.div`
   display: flex;
   align-items: center;
-  padding: 5px;
-  background: #fff;
-  border-radius: 30px;
-  box-shadow: 0px 2px 20px rgba(230, 230, 230, 0.7);
+  gap: 10px;
   width: 100%;
   max-width: 330px;
-  gap: 10px;
+  padding: 5px;
   font-size: 30px;
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: 0px 2px 20px rgba(230, 230, 230, 0.7);
 
   svg {
     color: ${props => props.theme.colors.pink} 
@@ -43,7 +45,28 @@ const ContainerSearch = styled.div`
   }
 `;
 
-const category =['Pulseiras', 'Anéis', 'Colares', 'Brincos Pequenos', 'Brincos Grandes', 'Tornozeleiras' ]
+const ContainerCard = styled.div`
+  display: grid;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  
+  @media (min-width: ${({theme}) => theme.size.md}) {
+    grid-template-columns: repeat(2, 320px);
+  }
+
+  @media (min-width: ${({theme}) => theme.size.lg}) {
+    grid-template-columns: repeat(3, 300px);
+  }
+
+  @media (min-width: ${({theme}) => theme.size.xl}) {
+    grid-template-columns: repeat(3, 450px);
+    gap: 40px;
+  }
+
+`;
+
+const category =['Pulseiras', 'Anéis', 'Colares', 'Brincos Pequenos', 'Brincos Grandes', 'Tornozeleiras', 'Acessórios']
 
 export default function Home () {
 
@@ -76,11 +99,13 @@ let arr = [
           </select>
       </ContainerSearch>
 
+      <ContainerCard>
         {arr.map(i => {
           return (
             <Card image={i.img}/>
           )
         })}
+      </ContainerCard>
 
     </ContainerHome>
   );

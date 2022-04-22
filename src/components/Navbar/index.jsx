@@ -9,21 +9,18 @@ import { RiShoppingCartLine } from 'react-icons/ri';
 
 
 const ContainerNav = styled.nav`
-  /* position: -webkit-sticky; */
   position: fixed;
-  /* right: 50%; */
+  grid-area: 'nav';
   bottom: 0;
-  z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px 25px;
-  width: 100%;
+  width: 98%;
   max-width: 700px;
   height: 60px;
-  background: #fff;
   border-radius: 30px;
-  margin: 0 auto;
+  background: #fff;
   box-shadow: 0px -1px 2px 2px rgba(245, 245, 245, 1);
   
   a {

@@ -22,27 +22,30 @@ const theme = {
   }
 };
 
-const Container = styled.div`
+const Wrapper = styled.div`
   position:relative;
   display: grid;
-  place-items: center;
   grid-template-rows: 60px 1fr;
+  grid-template-columns:
+  "header"
+  "page"
+  "nav" ;
+  place-items: center;
   overflow-y: auto;
   height: 100vh;
   width: 100%;
-    /* margin: 0 auto; */
-  /* padding: 0 10px; */
+  /* padding: 5px 0 ; */
   background: ${theme.colors.base};
 `
 
 export default function App() {
   return (
   <ThemeProvider theme={theme}>
-    <Container>
+    <Wrapper>
       <Header/>
       <AppRoutes/>
       <Navbar/>
-    </Container>
+    </Wrapper>
   </ThemeProvider>
   );
 };
