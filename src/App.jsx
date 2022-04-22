@@ -9,7 +9,8 @@ const theme = {
   colors: {
     base: '#fffdfc', 
     pink:'#EE5E69',
-    pinkGradient: 'linear-gradient(90deg, rgba(238,166,171,1) 0%, rgba(238,94,105,1) 100%)',
+    pinkGradientDark: 'linear-gradient(90deg, rgba(238,166,171,1) 0%, rgba(238,94,105,1) 100%)',
+    pinkGradientLight: 'linear-gradient(90deg, rgb(250, 181, 192) 0%, rgb(247, 157, 165) 100%)',
     gray: '#B9BBC3',
     black: '#272727'
   },
@@ -30,7 +31,7 @@ const Wrapper = styled.div`
   "header"
   "page"
   "nav" ;
-  place-items: center;
+  /* place-items: center; */
   overflow-y: auto;
   height: 100vh;
   width: 100%;
