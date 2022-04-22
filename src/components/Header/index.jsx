@@ -14,6 +14,8 @@ const ContainerHeader = styled.header`
   width: 100%;
   max-width: 700px;
   padding: 0 15px;
+  place-self: center;
+
   background:${props => props.theme.colors.base};
   box-shadow: 0px 1px 5px 2px rgba(100, 100, 100, 0.1);
   

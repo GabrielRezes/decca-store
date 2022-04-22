@@ -21,7 +21,9 @@ const ContainerNav = styled.nav`
   height: 60px;
   border-radius: 30px;
   background: #fff;
-  box-shadow: 0px -1px 2px  rgba(100, 100, 100, 0.1);
+  place-self: center;
+  border: 1px solid rgba(230, 230, 230, 0.8);
+  /* box-shadow: 0px -2px 5px  rgba(190, 190, 190, 0.2); */
 
   a {
     font-size: 30px;
@@ -54,7 +56,7 @@ const ContainerButton = styled.div`
     border: none;  
     border-radius: 50%;
     box-shadow: 0px 2px 20px -5px ${props => props.theme.colors.pink};
-    background: ${props => props.theme.colors.pinkGradient};  
+    background: ${props => props.theme.colors.pinkGradientDark};  
   }
 `
 export default function Navbar () {
