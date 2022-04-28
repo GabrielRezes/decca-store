@@ -49,7 +49,7 @@ const Info = styled.div`
     font-size: 16px;
     border-radius: 50px;
     color: #fff;
-    background: ${({theme}) => theme.colors.pinkGradient}
+    background: ${({theme}) => theme.colors.pinkGradientLight}
   }
 `;
 
