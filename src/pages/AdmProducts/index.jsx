@@ -1,3 +1,7 @@
+import { useState } from 'react'
+
+import { postImage } from '../../services/api';
+
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -14,10 +18,24 @@ const Container = styled.div`
     padding: 20px 40px;
 `;
 
+
 export default function AdmProducts () {
+
+  const [ value, setValue ] = useState('');
+
+  console.log(value)
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const urlNewImage = await postImage(value);
+    console.log(urlNewImage)
+  }
   return (
     <Container>
-      Adm product
+      <form onSubmit={handleSubmit}>
+        <input value={value} onChange={(e) => setValue(e.target.value)} type='file' accpet='image/*'/>
+        <button type='submit'>Upload</button>
+      </form>
     </Container>
   );
 };
