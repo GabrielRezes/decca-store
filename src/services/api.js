@@ -1,36 +1,35 @@
+import { useContext } from 'react';
+// import { AuthContext } from '../context/Auth';
 import axios from 'axios';
 
-const CLIENT_ID = 'c0266f50c43530a'
+// const { urlS3 } = useContext(AuthContext)
 
-// export const api = axios.create({
-//   baseURL: 'https://api.imgur.com'
-// })
+export const api = axios.create({
+  baseURL: import.meta.env.VITE_BASE_URL
+})
 
-// const authorization = `Authorization, Client-ID ${CLIENT_ID}`;
+export const getUrlAccess = async () => {
+  return api.get('/s3Url', { headers: {
+      "Content-Type" : "application/json",
+      "X-API-Key": `${import.meta.env.VITE_API_KEY}`
+    }
+  })
+};
 
-export const getAccess = async () => {
-  
-  const refreshToken = "87adff90469dcd65356f100d68e4bb074fbfdd10"
-  const clientId = "c0266f50c43530a"
-  const clientSecret = "4178823dc209412af2f882155f76df0dc7ece938"
-  const grantType = "refreshToken"
-  
-  var formdata = new FormData();
-  formdata.append("refresh_token", refreshToken);
-  formdata.append("client_id", clientId);
-  formdata.append("client_secret", clientSecret);
-  formdata.append("grant_type", refreshToken);
-
-  console.log('FORMDATA',formdata.append);
-  
-  var requestOptions = {
-    method: 'POST',
-    body: formdata,
-    redirect: 'follow'
-  };
-  
-  fetch("https://api.imgur.com/oauth2/token", requestOptions)
-    .then(response => response.text())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
+export const postImage = async (file) =>  {
+  return axios.put(urlS3, { headers: {
+    "Content-Type" : "multipart/form-data"
+    },
+    body: file
+  })
 }
+
+export const getImages = async (url) => {
+  return api.get('/objects', { headers: {
+      "Content-Type" : "application/json",
+      "X-API-Key": `${import.meta.env.VITE_API_KEY}`
+    }
+  })  
+}
+
+
